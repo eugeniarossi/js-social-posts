@@ -68,9 +68,6 @@ const posts = [
     }
 ];
 
-
-
-
 /************
  * Functions
  ***********/
@@ -97,7 +94,6 @@ function renderPost(elementHTML, postElement) {
     return elementHTML;
 }
 
-
 //Realizzare la lista dei post - idee e ipotesi
 //1. creo un ciclo che attraversa la lista dei post
 //2. per ogni post, creo (????) la struttura del post
@@ -115,5 +111,4 @@ posts.forEach(post => {
     currentHTMLPost = renderPost(currentHTMLPost, post)
     containerElement.append(currentHTMLPost);
 });
-
-
+///

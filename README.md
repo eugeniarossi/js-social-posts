@@ -29,24 +29,6 @@ Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i 
 Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo. 
 Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### BONUS
 - Formattare le date in formato italiano (gg/mm/aaaa)
 - Gestire l'assenza dell'immagine profilo con un elemento di fallback che contiene le iniziali dell'utente (es. Gaetano Frascolla > GF).
