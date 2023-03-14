@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Posts</title>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/1e3be9b4ce.js" crossorigin="anonymous"></script>
+    <!-- /fontawesome -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- app -->
+    <div id="app" v-cloak>
+        <h1 class="main-title">{{ mainTitle }}</h1>
+
+        <div id="container" class="posts-list">
+            <!-- post -->
+            <div class="post" v-for="(post, index) in posts">
+                <!-- header -->
+                <div class="post__header">
+                    <div class="post-meta">
+                        <div class="post-meta__icon">
+                            <img class="profile-pic" :src="posts[index].author.image" :alt="posts[index].author.name">
+                        </div>
+                        <div class="post-meta__data">
+                            <div class="post-meta__author">{{ posts[index].author.name }}</div>
+                            <div class="post-meta__time">{{ posts[index].created }}</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /header -->
+                <!-- text -->
+                <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima
+                    iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+                <!-- /text -->
+                <!-- image -->
+                <div class="post__image">
+                    <img :src="posts[index].media" alt="post image">
+                </div>
+                <!-- /image -->
+                <!-- footer -->
+                <div class="post__footer">
+                    <!-- likes -->
+                    <div class="likes js-likes">
+                        <!-- button -->
+                        <div class="likes__cta" @click="like(index)">
+                            <a class="like-button  js-like-button" href="#" data-postid="1" :class="posts[index].likeClass">
+                                <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                                <span class="like-button__label">Mi Piace</span>
+                            </a>
+                        </div>
+                        <!-- /button -->
+                        <!-- counter -->
+                        <div class="likes__counter">
+                            Piace a <b id="like-counter-1" class="js-likes-counter">{{ posts[index].likes }}</b> persone
+                        </div>
+                        <!-- /counter -->
+                    </div>
+                    <!-- /likes -->
+                </div>
+                <!-- /footer -->
+            </div>
+            <!-- /post -->
+
+        </div>
+    </div>
+    <!-- /app -->
+    <!-- vuejs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- vuejs -->
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <!-- js -->
+</body>
+
+</html>

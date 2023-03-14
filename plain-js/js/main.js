@@ -1,6 +1,5 @@
 'use strict';
 
-
 //milestone 1
 
 /************
@@ -17,7 +16,7 @@ const posts = [
     {
         id: 1,
         author: {
-            name: 'Gaetano Frascolla',
+            name: 'Rick & Morty',
             image: 'https://unsplash.it/300/300?image=20',
             age: 39,
             nPosts: 150
@@ -30,7 +29,7 @@ const posts = [
     {
         id: 2,
         author: {
-            name: 'Filippo Bonafini',
+            name: 'Phil Mangione',
             image: 'https://unsplash.it/300/300?image=',
             age: 39,
             nPosts: 150
@@ -111,4 +110,4 @@ posts.forEach(post => {
     currentHTMLPost = renderPost(currentHTMLPost, post)
     containerElement.append(currentHTMLPost);
 });
-///
+
